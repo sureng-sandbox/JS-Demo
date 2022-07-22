@@ -44,3 +44,7 @@ jobs:
         run: |
           NODE_ENV=test npm start -- --silent &
           npm run test:ci
+      - name: Install dependencies
+        run: npm install
+        env:
+        NPM_TOKEN: ${{secrets.NPM_AUTH_TOKEN}}
